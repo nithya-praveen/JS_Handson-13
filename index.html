@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .qst {
+            color: blue;
+        }
+
+        .ans {
+            color: rgb(149, 4, 4);
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM - Document Object Model</h1>
+    <b class="qst">Q1.</b>
+    <b class="ans">
+        Write the code to access element which is having id as "text".
+    </b> <br><br>
+    <b class="qst">A1.</b>document.getElementById('text') <br><br>
+    
+    <b class="qst">Q2.</b>
+    <b class="ans">
+        Write the code to access element which is having tag as "h1".
+    </b> <br><br>
+    <b class="qst">A2.</b>document.getElementsByTagName('h1') <br><br>
+
+    <b class="qst">Q3.</b>
+    <b class="ans">
+        Write the code to access element which is having class as "box".
+    </b> <br><br>
+    <b class="qst">A3.</b>document.getElementsByClassName('box') <br><br>
+    
+    <b class="qst">Q4.</b>
+    <b class="ans">
+        "<heading1>Hello</heading1>" Change the heading from ""Hello"" to ""Hello World"" using DOM functions.
+    </b> <br><br>
+    <b class="qst">A4.</b>document.getElementsByTagName(h1).innerText = "Hello World" <br><br>
+
+    <b class="qst">Q5.</b>
+    <b class="ans">
+        Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also
+        create button at the bottom named "Change Flex direction". When user clicks on this button, the cards 
+        arrangement should be changed to vertical direction.    
+    </b> <br><br>
+    <b class="qst">A5.</b>
+    <!-- //<div class="parent"> <br>
+        <div class="child"></div> <br>
+        <div class="child"></div> <br>
+        <div class="child"></div> <br>
+    </div> -->
+    <br>
+    <button onclick="changedirection()">Click Me</button> <br>
+    function changedirection() <br>
+    { <br>
+        const element = document.getElementsByClassName('parent');   <br>
+        element[0].style.flexDirection = "column"; <br>
+    } <br><br>
+
+    <b class="qst">Q6.</b>
+    <b class="ans">
+        What’s the difference between window vs document?
+    </b> <br><br>
+    <b class="qst">A6.</b>
+    <b>Window object :</b> It is the top most object and outermost element of the object hierarchy as shown in Figure 1. <br>
+    <b>Document object :</b> Each HTML document that gets loaded into a window becomes a document object. The document contains the contents of 
+    the page. Using document object, JavaScript can modify, add and delete the HTML elements, attributes CSS styles in the page
+    
+    <b class="qst">Q7.</b>
+    <b class="ans">
+        "<heading>Hello </heading>"
+        Add one style attribute and give text color as red and id attribute and give the id value as ""heading"" in
+        the above given h1 tag using DOM functions.  
+    </b> <br><br>
+    <b class="qst">A7.</b>
+    document.getElementsByTagName('h1').style.color="red" <br>
+    document.getElementsByTagName('h1').IdName="heading" <br><br>
+    
+    <b class="qst">Q8.</b>
+    <b class="ans">
+        Create an HTML page having content as Hello world and a button named Replace Text. When user will click on
+        this button page content should be changed to "Welcome to Elevation academy".  
+    </b> <br><br>
+    <b class="qst">A8.</b>
+    <div>Hello World</div> <br>
+    <button onclick="Replace">Replace Text</button> <br>
+    function Replace() <br>
+    { <br>
+        document.getElementsByTagName('div')[0].innerText="Welcome to Elevation Academy" <br>
+    } <br> <br>
+    
+    <b class="qst">Q9.</b>
+    <b class="ans">
+        Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating every 
+        second.
+    </b> <br><br>
+    <b class="qst">A9.</b>
+    <!-- <div class="parent">
+        <div class="hr"></div> <br>
+        <div class="min"></div> <br>
+        <div class="sec"></div>
+    </div> -->
+     <br>
+    const date = new Date(); <br>
+    let hours = date.getHours(); <br>
+    let mins = date.getMinutes(); <br>
+    let secs = date.getSeconds(); <br>
+    document.getElementsByClassName('hr').innerHTML=`${hours}`; <br>
+    document.getElementsByClassName('min').innerHTML=`${mins}`; <br>
+    document.getElementsByClassName('sec').innerHTML=`${secs}`; <br><br>
+
+    <b class="qst">Q10.</b>
+    <b class="ans">
+        Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected.
+    </b> <br><br>
+    <b class="qst">A10.</b>
+    <div></div>
+    const adddropdown = document.creatElement(select);
+    adddropdown.value = "Year"
+    adddropdown.value = "20-21"
+    adddropdown.value = "21-22"
+
+  <script src="./index.js"></script>
+    
+</body>
+</html>
